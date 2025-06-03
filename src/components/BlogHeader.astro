@@ -1,0 +1,69 @@
+---
+    import "../styles/global.css";
+    const { frontmatter } = Astro.props;
+---
+
+<div id="container">
+    <div id="titles">
+        <h1>{ frontmatter.title }</h1>
+        <h2>{ frontmatter.subtitle }</h2>
+    </div>
+    <div id="small-data">
+        <div><i>written by:</i> luc</div>
+        <div>{ frontmatter.startdate?.slice(0,10) } — { frontmatter.enddate?.slice(0,10) }</div>
+        <div><i>published: </i>{ frontmatter.pubdate?.slice(0,10) }</div>
+        <div><i>moods: </i> { frontmatter.moods }</div>
+    </div>
+</div>
+
+<style>
+    img {
+        width: 100%;
+        max-height: 30%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+        padding-left: 1.5%;
+        padding-top: 1.5%;
+    }
+
+    h2 {
+        font-family: 'mononoki-italic';
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        margin-top: 0%;
+        padding-left: 1.5%;
+    }
+
+    #small-data {
+        font-size: .9rem;
+        margin-top: 1%;
+        margin-left: 1.5%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #small-data > div {
+        min-width: max-content;
+        width: 100%;
+        text-align: center;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    #container {
+        padding-bottom: 1.5%;
+        border-bottom: 1px white dotted;
+    }
+
+    #titles {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

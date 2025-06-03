@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import BlogHeader from "../components/BlogHeader.astro";
+const { frontmatter, title } = Astro.props;
+---
+
+<head>
+    <title>lucblog — {frontmatter.title}</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="thummm.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+</head>
+
+<script src="../pages/api/oneko.js"></script>
+
+<div id="container">
+    <div id="overhead">
+        <BlogHeader frontmatter={frontmatter} />
+        <div id="content">
+            <slot />
+        </div>
+    </div>
+    <div id="back">
+        <a href="/blog">go back</a>
+    </div>
+</div>
+
+<style>
+    #back {
+        display: flex;
+        text-align: left;
+        height: min-content;
+    }
+    
+    #container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #content {
+        padding: 1.5%;
+        padding-top: 0%;
+    }
+
+    #overhead {
+        /* border: 1px solid white; */
+        width: 60%;
+        height: 97vh;
+        max-height: 100vh;
+        margin: auto;
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        scrollbar-width: thin;
+        scrollbar-color: #f09a9a #350808;
+    }
+</style>
