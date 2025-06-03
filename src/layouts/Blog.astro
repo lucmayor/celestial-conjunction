@@ -5,11 +5,11 @@ const { frontmatter, title } = Astro.props;
 ---
 
 <head>
-    <title>lucblog — {frontmatter.title}</title>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="thummm.png" />
+    <link rel="icon" type="image/png" href="thummm.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <title>lucblog — {frontmatter.title}</title>
 </head>
 
 <script src="../pages/api/oneko.js"></script>

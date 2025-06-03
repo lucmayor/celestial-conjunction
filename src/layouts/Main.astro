@@ -16,10 +16,11 @@ const { heading, title } = Astro.props;
 
 <script src="../pages/api/oneko.js"></script>
 <div class="overhead">
-    <Header heading={heading} />
-
-    <div class="content-box">
-        <slot />
+    <div>
+        <Header heading={heading} />
+        <div class="content-box">
+            <slot />
+        </div>
     </div>
 
     <div class="align">
@@ -33,7 +34,7 @@ const { heading, title } = Astro.props;
 <style>
     .shoutout {
         font-size: .6rem;
-        font-family: 'mononoki-italic'
+        font-family: 'mononoki-italic';
     }
 
     .align {
@@ -58,10 +59,36 @@ const { heading, title } = Astro.props;
 
         width: 60vw;
         max-width: 99%;
-        height: 70vh;
+        height: 75vh;
         max-height: 80vh;
 
         margin-top: .5vh;
         margin-bottom: .5vh;
     }
+
+    @media only screen and (max-width:600px) {
+        .align {
+            flex-direction: column;
+        }
+
+        .shoutout {
+            display: none;
+        }
+
+        .content-box {
+            border: none;
+            width: 100vw;
+            font-size: .9rem;
+
+            overflow-y: scroll;
+            scrollbar-width: thin;
+        }
+        
+		.overhead {
+            max-width: 100%;
+            height: 95vh;
+            /* border: 1px solid white; */
+            justify-content: space-between;
+        }
+	}
 </style>

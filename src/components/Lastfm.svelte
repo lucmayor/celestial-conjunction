@@ -17,7 +17,7 @@
   <div class="wrapper" in:fade>
     <div class="sultry">luc was last listening to...</div>
     <div class="song_container">
-      <img id="album_art" src={res[0]} width="50px" alt="cover art" />
+      <img id="album_art" src={res[0]} width="50px" alt="?" />
       <song>
         <div id="artist" class="scroll">
           <div class="scrollc">{res[1]}</div>
@@ -34,6 +34,16 @@
 {/await}
 
 <style>
+  #album_art {
+    border-right: 1px dashed white;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+  }
+
   div {
     text-align: center;
     font-size: 0.9em;
@@ -48,9 +58,9 @@
 
   .song_container {
     align-items: center;
-    /* border: 1px solid gold; */
     border: 1px dashed white;
     display: flex;
+    height: 50px;
     flex-direction: row;
   }
 
@@ -82,4 +92,10 @@
       margin-right: 100%;
     }
   }
+
+  @media only screen and (max-width:600px) {
+    .wrapper {
+      max-width: 85vw;
+    }
+	}
 </style>

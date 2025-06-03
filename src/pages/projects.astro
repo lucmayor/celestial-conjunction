@@ -1,12 +1,47 @@
 ---
 	import Layout from "../layouts/Main.astro";
+	import WorkEntry from "../components/WorkEntry.astro";
+
+	import commprojects from "../data/community.json";
 ---
 
 <Layout heading="works" title="worksworksworksworksworksworks">
 	<div class="head">
-		projects
+		<h1>community</h1>
+		<div class="group">
+			{
+				commprojects.map(({ title, url, description, bio, tags, times}) => (
+					<WorkEntry title={title} link={url} description={description}, bio={bio}, tags={tags}, times={times} />
+				))
+			}
+		</div>
+		<h1 class="alt">test</h1>
 	</div>
 </Layout>
 
 <style>
+
+	h1 {
+		padding: 0%;
+		margin: 0%;
+		text-align: left;
+		font-size: 1rem;
+		padding-bottom: .3rem;
+	}
+
+	h1.alt {
+		text-align: right;
+	}
+
+	h1::before {
+		content: "✮*•̩̩͙✧•̩̩͙*˚✧*˚ ";
+	}
+
+	h1::after {
+		content: " ˚*✧˚*•̩̩͙✧•̩̩͙*˚✮";
+	}
+
+	.group {
+		margin-bottom: .5rem;
+	}
 </style>
