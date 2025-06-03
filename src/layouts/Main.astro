@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import Webrings from '../components/Webrings.astro';
+
+import "../styles/global.css";
+const { heading, title } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="thummm.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+
+<script src="../pages/api/oneko.js"></script>
+<div class="overhead">
+    <Header heading={heading} />
+
+    <div class="content-box">
+        <slot />
+    </div>
+
+    <div class="align">
+        <div class="shoutout">
+            site designed by <a href="https://twitter.com/FALCO_PLAYER">@FALCO_PLAYER</a> get it twisted.
+        </div>
+        <Webrings />
+    </div>
+</div>
+
+<style>
+    .shoutout {
+        font-size: .6rem;
+        font-family: 'mononoki-italic'
+    }
+
+    .align {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .overhead {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        max-width: 60%;
+    }
+
+    .content-box {
+        border: 2px dotted #f09a9a;
+
+        width: 60vw;
+        max-width: 99%;
+        height: 70vh;
+        max-height: 80vh;
+
+        margin-top: .5vh;
+        margin-bottom: .5vh;
+    }
+</style>

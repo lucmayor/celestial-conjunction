@@ -1,0 +1,62 @@
+---
+    import "../styles/global.css";
+    const { heading } = Astro.props;
+---
+
+<div class="header">
+    <div class="title">
+        clem.sd
+        <div class="current">
+            <span>⌈{heading}⌋</span>
+        </div>
+    </div>
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/projects">works</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li><a href="/now">now</a></li>
+    </ul>
+</div>
+
+<style>
+    span {
+        color: #EC8383;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .current {
+        font-family: 'mononoki';
+        font-size: 1.25rem;
+    }
+    
+    .title {
+        display: flex;
+        flex-direction: row;
+
+        font-family: 'mononoki-bold';
+        font-size: 2rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        padding-left: .5rem;
+    }
+
+    ul li {
+        display: inline;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .header {
+            flex-direction: column;
+        }
+    }
+</style>

@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Main.astro";
+import Lastfm from "../components/Lastfm.svelte";
+import Status from '../components/Status.astro';
+---
+
+<Layout heading="home" title="lucsitelucsitelucsitelucsitelucsite">
+	<div class="head">
+		<div class="main">
+		</div>
+
+		<div class="subsection">
+			<div>lol</div>
+			<Lastfm />
+			<Status />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.subsection {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>
