@@ -1,13 +1,73 @@
 ---
-	import Layout from "../layouts/Main.astro";
+import Layout from "../layouts/Main.astro";
 ---
 
-<Layout heading="about" title="aboutaboutaboutaboutaboutaboutabout">
+<Layout heading="inspo" title="inspirationsinspirationsinspirationsinspirationsinspirationsinspirationsinspirations">
 	<div class="head">
-		about
+		<div class="layer">
+			this site couldn't have been made without extensive inspiration and
+			influence from other sources. these people are:
+
+			<ul>
+				<li>
+					<a href="https://goth.zip/">goth.zip</a>, created by <a
+						href="https://github.com/riesha">selene</a
+					>
+				</li>
+				<li>
+					<a href="https://tyju.cc/">tyju.cc</a>, created by <a
+						href="https://github.com/onlytomorrow">vince</a
+					>
+				</li>
+				<li>
+					<a href="https://moonlight.computer/">moonlight.computer</a
+					>, created by moonlightcomputer
+				</li>
+				<li>
+					<a href="https://rumi.moe/">rumi.moe</a>, created by <a
+						href="https://github.com/dichromatic">rumi</a
+					>
+				</li>
+				<li>
+					<a href="https://github.com/lucmayor/homebase"
+						>the last iteration of my site</a
+					>, by <a href="https://github.com/lucmayor">myself</a> & help
+					from
+					<a href="https://github.com/riesha">selene</a>
+				</li>
+			</ul>
+
+			please give them their flowers!
+		</div>
 	</div>
 </Layout>
 
 <style>
+	div.head {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
+		margin: 0.5rem;
+		font-family: "mononoki";
+		max-height: 97%;
+
+		overflow: scroll;
+		overflow-x: visible;
+		scrollbar-width: thin;
+		scrollbar-color: #f09a9a #562c2c;
+
+		overflow-wrap: break-word;
+		hyphenate-limit-chars: 10;
+		hyphens: auto;
+	}
+
+	.layer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 80%;
+	}
 </style>
