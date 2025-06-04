@@ -6,7 +6,8 @@ startdate: 2025-05-22
 enddate: 2025-05-22
 pubdate: 2025-05-22
 editdate: 
-tags: 
+author: clem
+tags: money, swag, bitches
 moods: 
 topics: 
 listening_to:

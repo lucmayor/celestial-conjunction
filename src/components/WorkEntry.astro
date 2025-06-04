@@ -1,5 +1,5 @@
 ---
-const { title, description, tags, link, bio, times } = Astro.props;
+const { title, description, tags, link, bio, times, readtime } = Astro.props;
 ---
 
 <div class="entry">
@@ -13,7 +13,7 @@ const { title, description, tags, link, bio, times } = Astro.props;
         </div>
     </div>
     <div id="details">
-        <span><i>{times? times : "unknown"}</i> &#x23F2;</span>
+        <span>{readtime? "["+readtime+"] " : "[n/a] "}<i>{times? times : "unknown"}</i> &#x23F2;</span>
         <span><i>{tags? tags + " " : "no tags"}</i> #</span>
     </div>
 </div>

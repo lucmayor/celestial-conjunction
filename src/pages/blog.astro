@@ -1,13 +1,19 @@
 ---
-	import Layout from "../layouts/Main.astro";
+import Layout from "../layouts/Main.astro";
+import Entry from "../components/WorkEntry.astro";
+
+const allPosts = Object.values(
+	import.meta.glob("../pages/posts/*.md", { eager: true }),
+);
 ---
 
 <Layout heading="blog" title="blogblogblogblogblogblogblog">
-	<div class="head">
-		about
-	</div>
+	{
+		allPosts.map((post: any) => <Entry link={post.url} readtime={post.frontmatter.minutesread} title={post.frontmatter.title} bio={post.frontmatter.subtitle} tags={post.frontmatter.tags} times={() => {
+			const temp = post.frontmatter.startdate?.slice(0,10);
+			return temp;
+		}} />)
+	}
 </Layout>
 
-<style>
-
-</style>
+<style></style>

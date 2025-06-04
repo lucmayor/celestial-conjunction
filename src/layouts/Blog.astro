@@ -56,4 +56,30 @@ const { frontmatter, title } = Astro.props;
         scrollbar-width: thin;
         scrollbar-color: #f09a9a #350808;
     }
+
+    @media only screen and (max-width:600px) {
+        #container {
+            flex-direction: column-reverse;
+        }
+        #back {
+            text-align: center;
+            justify-content: center;
+        }
+
+        #overhead {
+            width: 100%;
+        }
+
+        #content {
+            padding: 0%;
+        }
+
+        div#back > a::before {
+            content: "✮*•̩̩͙✧•̩̩͙*˚✧*˚ ";
+        }
+
+        div#back > a::after {
+            content: " ˚*✧˚*•̩̩͙✧•̩̩͙*˚✮";
+        }
+    }
 </style>

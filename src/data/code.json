@@ -1,0 +1,26 @@
+[
+    {
+        "title": "shinebot",
+        "url": "https://github.com/lucmayor/shinebot",
+        "description": "discord bot",
+        "bio": "full-scale utility bot primarily revolving personal usage.",
+        "tags": [
+            "rust",
+            "discord",
+            "productivity"
+        ],
+        "times": "2025 — present"
+    },
+    {
+        "title": "osu!scrobbler",
+        "url": "https://github.com/lucmayor/osu-scrobbler",
+        "description": "reconnecting osu! and last.fm",
+        "bio": "lightweight, small-scale terminal-based osu!scrobbler intended for usage with last.fm",
+        "tags": [
+            "python",
+            "gaming",
+            "data_hoarding"
+        ],
+        "times": "2024"
+    }
+]

@@ -9,7 +9,7 @@
         <h2>{ frontmatter.subtitle }</h2>
     </div>
     <div id="small-data">
-        <div><i>written by:</i> luc</div>
+        <div><i>written by:</i> { frontmatter.author }</div>
         <div>{ frontmatter.startdate?.slice(0,10) } — { frontmatter.enddate?.slice(0,10) }</div>
         <div><i>published: </i>{ frontmatter.pubdate?.slice(0,10) }</div>
         <div><i>moods: </i> { frontmatter.moods }</div>
@@ -65,5 +65,26 @@
     #titles {
         display: flex;
         flex-direction: column;
+    }
+
+    @media only screen and (max-width:600px) {
+        h1 {
+            padding: 0%;
+        }
+
+        h2 {
+            padding: 0%;
+        }
+
+        #small-data {
+            margin-left: 0%;
+            flex-wrap: wrap;
+        }
+
+        #small-data > div {
+            width: 50%;
+            font-size: .8rem;
+            text-align: left;
+        }
     }
 </style>
