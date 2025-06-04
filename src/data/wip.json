@@ -1,0 +1,25 @@
+[
+    {
+        "title": "the tage",
+        "url": "",
+        "description": "the first staydown group dump",
+        "bio": "a compilation of clips from various people within stay down",
+        "tags": [
+            "gaming",
+            "editing",
+            "friends"
+        ],
+        "times": "2025"
+    },
+    {
+        "title": "always-on project",
+        "url": "",
+        "description": "adult swim but cooler",
+        "bio": "a simulated always-on \"tv station\" for personal use",
+        "tags": [
+            "media",
+            "coding"
+        ],
+        "times": "???? it's complicated"
+    }
+]

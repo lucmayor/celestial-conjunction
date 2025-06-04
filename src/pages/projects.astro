@@ -5,6 +5,7 @@
 	import commprojects from "../data/community.json";
 	import creative from "../data/creative.json";
 	import code from "../data/code.json";
+	import wip from "../data/wip.json";
 ---
 
 <Layout heading="works" title="worksworksworksworksworksworks">
@@ -29,6 +30,15 @@
 		<div class="group">
 			{
 				code.map(({ title, url, description, bio, tags, times}) => (
+					<Entry title={title} link={url} description={description}, bio={bio}, tags={tags}, times={times} />
+				))
+			}
+		</div>
+
+		<h1 class="alt">coming soon</h1>
+		<div class="group">
+			{
+				wip.map(({ title, url, description, bio, tags, times}) => (
 					<Entry title={title} link={url} description={description}, bio={bio}, tags={tags}, times={times} />
 				))
 			}
