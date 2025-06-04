@@ -12,6 +12,12 @@ const { heading, title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <meta content="clem.sd" property="og:title" />
+    <meta content="oh, my darling, clementine, dreadful sorry, clementine" property="og:description" />
+    <meta content="https://lovepill.moe/" property="og:url" />
+    <meta content="https://lovepill.moe/thummm.png" property="og:image" />
+    <meta content="#f09a9a" data-react-helmet="true" name="theme-color" />
 </head>
 
 <script src="../pages/api/oneko.js"></script>
@@ -25,7 +31,7 @@ const { heading, title } = Astro.props;
 
     <div class="align">
         <div class="shoutout">
-            site designed by <a href="https://twitter.com/FALCO_PLAYER">@FALCO_PLAYER</a> get it twisted.
+            site designed by <a href="https://twitter.com/FALCO_PLAYER">@FALCO_PLAYER</a>, peace 2 every crease on yr brain.
         </div>
         <Webrings />
     </div>
@@ -81,7 +87,7 @@ const { heading, title } = Astro.props;
             font-size: .9rem;
 
             overflow-y: scroll;
-            scrollbar-width: thin;
+            scrollbar-width: none;
         }
         
 		.overhead {

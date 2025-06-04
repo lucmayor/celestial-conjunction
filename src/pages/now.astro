@@ -4,10 +4,102 @@ import Layout from "../layouts/Main.astro";
 
 <Layout heading="about" title="aboutaboutaboutaboutaboutaboutabout">
 	<div class="head">
+		<div id="top">
+			inspiration taken from <a href="https://void.onlytomorrow.net/now">tyjubi</a>'s site.
+			this is media i'm presently (frequently) interacting with.
+		</div>
+
 		<div>
-			inspiration taken from <a href="https:/tyju.cc">tyjubi</a>'s site. this is media i'm presently interacting with.
+			<h1>audio</h1>
+			<h3>note: maybe just check my <a href="https://www.last.fm/user/luc">last.fm</a>...</h3>
+			<ul>
+				<li>clairo - immunity</li>
+				<i>(for the millionth time...)</i>
+				<li>xaev - TO-THE-CORE_153bpm</li>
+				<li>chinapoet beat tapes</li>
+			</ul>
+		</div>
+
+		<div class="alt">
+			<h1 class="alt">visual</h1>
+			<ul>
+				<li>northernlion / pge youtube videos</li>
+				<li>the NBA playoff finals games — cheering for pacers</li>
+			</ul>
+		</div>
+
+		<div>
+			<h1>reading</h1>
+			<ul>
+				<li>online blogs:</li>
+				<ul>
+					<li><a href="https://void.onlytomorrow.net/">tyjubi's page</a></li>
+					<i>very interesting insight into easy to understand game dev</i>
+					<li>rayne fisher-quann's <a href="https://internetprincess.substack.com">internet princess</a> blog</li>
+					<i>easily my favorite substack to read</i>
+				</ul>
+			</ul>
+		</div>
+
+		<div class="alt">
+			<h1 class="alt">"working"</h1>
+			<ul>
+				<li>this site + blog posts <i>(and however many more iterations it has...)</i></li>
+				<li>my discord bot</li>
+				<li>some extra-curricular school based projects</li>
+				<li>full productivity overhaul</li>
+			</ul>
 		</div>
 	</div>
 </Layout>
 
-<style></style>
+<style>
+
+	#top {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+	}
+
+	ul > li {
+		padding-left: 0;
+	}
+
+	ul > ul {
+		padding-left: 1rem;
+	}
+
+	div.alt > ul > li {
+		text-align: right;
+		direction: rtl;
+		padding-right: 1rem;
+		margin-left: 0;
+	}
+
+	div.head > * {
+		padding-left: 1rem;
+	}
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h1.alt {
+		padding-left: 0;
+		padding-right: 1rem;
+		text-align: right;
+	}
+
+	div.head > * > h3 {
+		margin-top: 0;
+		padding-top: 0;
+		padding-left: 0;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+</style>

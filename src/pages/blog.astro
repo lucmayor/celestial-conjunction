@@ -8,12 +8,18 @@ const allPosts = Object.values(
 ---
 
 <Layout heading="blog" title="blogblogblogblogblogblogblog">
-	{
-		allPosts.map((post: any) => <Entry link={post.url} readtime={post.frontmatter.minutesread} title={post.frontmatter.title} bio={post.frontmatter.subtitle} tags={post.frontmatter.tags} times={() => {
-			const temp = post.frontmatter.startdate?.slice(0,10);
-			return temp;
-		}} />)
-	}
+	<div id="top">
+		{
+			allPosts.map((post: any) => <Entry link={post.url} readtime={post.frontmatter.minutesread} title={post.frontmatter.title} bio={post.frontmatter.subtitle} tags={post.frontmatter.tags} times={() => {
+				const temp = post.frontmatter.startdate?.slice(0,10);
+				return temp;
+			}} />)
+		}
+	</div>
 </Layout>
 
-<style></style>
+<style>
+	div#top {
+		padding: .5rem;
+	}
+</style>

@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/Blog.astro
 title: awesome test post cool
-subtitle: example test post for lovepill
+subtitle: example test post for clemsd
 startdate: 2025-05-22
 enddate: 2025-05-22
 pubdate: 2025-05-22
 editdate: 
 author: clem
-tags: money, swag, bitches
-moods: 
+tags: money, swag, aura
+moods: melancholic
 topics: 
 listening_to:
 ---

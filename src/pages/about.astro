@@ -1,13 +1,47 @@
 ---
-	import Layout from "../layouts/Main.astro";
+import Layout from "../layouts/Main.astro";
 ---
 
 <Layout heading="about" title="aboutaboutaboutaboutaboutaboutabout">
 	<div class="head">
-		about
+		<span class="main"
+			>hi its luc i don't really have much to say about myself
+			surprisingly (but mostly because it feels weird to bear myself this
+			publicly) ... i'm 22, i like cats, i'm half filipino, i'm a bit obsessed with music and fashion,
+			and i enjoy competitive games</span
+		>
+		<span>you probably know me from:</span>
+		<ul>
+			<li>
+				<a href="https://rateyourmusic.com/~romance">rym</a> or <a
+					href="https://www.last.fm/user/luc">last.fm</a>
+			</li>
+			<i>i listen to a lot of music generally</i>
+			<li><a href="https://osu.ppy.sh/users/7314046">osu!</a></li>
+			<i>my most competitive game, possibly</i>
+			<li><a href="https://slippi.gg/user/luc-0">ssbm</a></li>
+			<i>my *new* competitive game... new being relative</i>
+			<li><a href="https://staydown.money/">staydown</a></li>
+			<i>our online, worldwide friend group</i>
+			<li><a href="https://x.com/FALCO_PLAYER">twitter</a></li>
+			<i>i just be posting a lot what can i say</i>
+		</ul>
+
+		<span class="main">regardless, i hope you enjoy nuzzling into my chopped up corner of the web.</span>
 	</div>
 </Layout>
 
 <style>
+	span.main {
+		text-align: center;
+	}
+	
+	div.head > span {
+		margin-bottom: .5rem;
+	}
 
+	ul {
+		margin: 0%;
+		margin-bottom: .5rem;
+	}
 </style>

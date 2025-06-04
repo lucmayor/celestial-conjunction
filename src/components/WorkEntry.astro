@@ -13,20 +13,24 @@ const { title, description, tags, link, bio, times, readtime } = Astro.props;
         </div>
     </div>
     <div id="details">
-        <span>{readtime? "["+readtime+"] " : "[n/a] "}<i>{times? times : "unknown"}</i> &#x23F2;</span>
-        <span><i>{tags? tags + " " : "no tags"}</i> #</span>
+        <span
+            >{readtime ? "[" + readtime + "] " : ""}<i
+                >{times ? times : "unknown"}</i
+            > &#x23F2;</span
+        >
+        <span><i>{tags ? tags + " " : "no tags"}</i> #</span>
     </div>
 </div>
 
 <style>
     div#maintitles > i {
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: darkslategrey;
     }
 
     div#biography {
         color: grey;
-        font-size: .6rem;
+        font-size: 0.6rem;
         max-width: 100%;
         overflow: hidden;
     }
@@ -43,8 +47,8 @@ const { title, description, tags, link, bio, times, readtime } = Astro.props;
         display: flex;
         flex-direction: column;
 
-        margin: .2rem;
-        font-size: .8rem;
+        margin: 0.2rem;
+        font-size: 0.8rem;
         color: slategray;
         flex-grow: 3;
         text-align: right;
@@ -53,8 +57,19 @@ const { title, description, tags, link, bio, times, readtime } = Astro.props;
     #titles {
         display: flex;
         flex-direction: column;
-        margin: .2rem;
+        margin: 0.2rem;
         max-width: 70%;
         flex-grow: 8;
+    }
+
+    @media only screen and (max-width: 600px) {
+        div#maintitles > i {
+            display: none;
+        }
+
+        #details > span {
+            font-size: .5rem;
+            text-wrap: pretty;
+        }
     }
 </style>
