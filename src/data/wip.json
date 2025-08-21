@@ -12,6 +12,17 @@
         "times": "2025"
     },
     {
+        "title": "album ranker",
+        "url": "",
+        "description": "a ranked topster helper tool",
+        "bio": "application of the chess elo system for ranking purposes.",
+        "tags": [
+            "music",
+            "coding"
+        ],
+        "times": "????"
+    },
+    {
         "title": "always-on project",
         "url": "",
         "description": "adult swim but cooler",
@@ -20,6 +31,6 @@
             "media",
             "coding"
         ],
-        "times": "???? it's complicated"
+        "times": "????"
     }
 ]
