@@ -1,15 +1,15 @@
 ---
 layout: ../../layouts/Blog.astro
 title: awesome test post cool
-subtitle: example test post for clemsd
+subtitle: example test post for lucpw
 header: /blogimg/header_archival.gif
 startdate: 2025-05-22
 enddate: 2025-05-22
 pubdate: 2025-05-22
 editdate: 
-author: clem
+author: luc
 tags: money, swag, aura
-moods: melancholic
+moods: yep
 topics: 
 listening_to:
 ---

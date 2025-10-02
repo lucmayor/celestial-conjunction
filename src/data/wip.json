@@ -12,10 +12,10 @@
         "times": "2025"
     },
     {
-        "title": "album ranker",
+        "title": "alfm",
         "url": "",
-        "description": "a ranked topster helper tool",
-        "bio": "application of the chess elo system for ranking purposes.",
+        "description": "a modern approach to metadata",
+        "bio": "a proof of concept model for music habit tracking, similar to last.fm",
         "tags": [
             "music",
             "coding"
