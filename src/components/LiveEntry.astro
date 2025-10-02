@@ -1,0 +1,38 @@
+---
+const { body, times, poster } = Astro.props;
+---
+
+<div class="entry">
+    <div id="header">
+        <div id="poster">{poster}</div>
+        <div id="date">{times}</div>
+    </div>
+    <div id="body">
+        {body}
+    </div>
+</div>
+
+<style>
+    .entry {
+        border-bottom: 1px dotted white;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#header {
+        color: lightslategray;
+    }
+
+    div#body {
+        color: lightgray;
+    }
+
+    div#header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+</style>

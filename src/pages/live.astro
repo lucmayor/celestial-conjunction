@@ -1,20 +1,34 @@
 ---
 import Layout from "../layouts/Main.astro";
+import LiveEntry from "../components/LiveEntry.astro";
+
+import posts from "../data/liveposting.json";
 ---
 
 <Layout heading="live" title="livelivelivelivelivelivelivelivelivelivelivelivelivelivelive">
 	<div class="head">
         <div class="centre">
-            <div class="prompt">
-                <div class="divider">
-                    ︵‿︵‿୨♡୧‿︵‿︵
-                </div>
-                    while i have a recent distaste towards microblogging, i believe having a space to write short-form without going into the depths of a full blog post is useful. therefore, we have the "live feed", seen below.
-                <div class="divider">
-                    ︵‿︵‿୨♡୧‿︵‿︵
+            <div id="container">
+                <div class="prompt">
+                    <div class="divider">
+                        ︵‿︵‿୨♡୧‿︵‿︵
+                    </div>
+                        i believe having a space to write short-form without 
+                        going into the depths of a full blog post is useful, 
+                        and i've had a dislike of twitter as of recent. 
+                        therefore, we have the "live feed", seen below.
+                    <div class="divider">
+                        ︵‿︵‿୨♡୧‿︵‿︵
+                    </div>
                 </div>
             </div>
-
+            <div>
+                {
+                    posts.map(({ body, times, poster }) => (
+                        <LiveEntry body={body} times={times} poster={poster} />
+                    ))
+                }
+            </div>
             <!-- each entry goes below this, script -->
         </div>
 	</div>
@@ -24,6 +38,7 @@ import Layout from "../layouts/Main.astro";
     .centre {
         display: flex;
         justify-content: center;
+        flex-direction: column;
     }
 
     .divider {
@@ -41,5 +56,11 @@ import Layout from "../layouts/Main.astro";
         color: white;
         font-size: .8rem;
         padding: .5rem;
+    }
+
+    #container {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
     }
 </style>
